@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import button from 'public/static/images/button.svg';
-import image from 'public/static/images/Image.svg';
+import image from 'public/static/images/Bitmap.png';
 import React from 'react';
 
-import Container from '../layouts/Container';
 import { Button } from '../ui/button/Button';
 import ContainerFluid from '../layouts/ContainerFluid';
 
@@ -11,40 +9,38 @@ export const Header = () => {
   return (
     <>
       <ContainerFluid>
-        <div className="py-12 grid max-h-[496px] w-full grid-cols-11 bg-slate-600">
-          <div className="col-span-5 flex h-[496px] flex-col py-[85px]">
+        <div className="pb-12 mb-[150px] grid max-h-[616px] w-full grid-cols-11 bg-[#2B2835] text-white">
+          <div className="col-span-6">
+            <div className="relative h-[766px]">
+              <Image src={image} layout="fill" alt="setel" />
+            </div>
+          </div>
+          <div className="col-span-5 flex h-[238px] pt-[200px] pr-[135px] flex-col py-[85px]">
             <div className="grow space-y-[30px] pb-[45px]">
-              <div className="text-[44px] font-bold leading-[54px] text-[#2F281E]">
-                The Design Thinking superpowers
+              <div className="text-[44px] font-bold leading-[54px]">
+                Beats Studio3 Wireless
               </div>
-              <div className="text-lg font-normal leading-7 text-[#544837]">
-                Tools, tutorials, design and innovation experts, all in one
-                place! The most intuitive way to imagine your next user
-                experience.
+              <div className="text-lg font-normal leading-7">
+                Experience your music like never before.
               </div>
             </div>
             <div className="grow pr-[140px]">
               <div className="flex flex-row place-items-center ">
+                <div className="grow">$299.95</div>
                 <div className="grow">
                   <Button
-                    name={'Get started'}
-                    text={'text-white text-base font-bold leading-6'}
-                    bgColor={'bg-[#FF9900]'}
-                    w={'w-[175px]'}
-                    h={'h-[53px]'}
+                    name={"BUY NOW"}
+                    text={"text-white text-base font-bold leading-6"}
+                    bgColor={"bg-[#FF9900]"}
+                    rounded={"rounded-full"}
+                    w={"w-[175px]"}
+                    h={"h-[53px]"}
                   />
-                </div>
-                <div className="grow">
-                  <div className="relative h-[23px] w-[161px]">
-                    <Image src={button} layout="fill" alt="what the video" />
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-span-6">
-            <div className="relative min-h-full">
-              <Image src={image} layout="fill" alt="setel" />
+            <div className='text-lg font-normal leading-7'>
+              $60 Apple Music gift card with purchase of select Beats products.*
             </div>
           </div>
         </div>

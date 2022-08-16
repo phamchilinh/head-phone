@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <>
       <ContainerFluid>
-          <div className="fixed flex h-[78px] w-full flex-row items-center bg-[#191720] bg-opacity-40 px-[95px] py-3">
+          <div className="fixed z-10 flex h-[78px] w-full flex-row items-center bg-[#191720] bg-opacity-30 px-[95px] py-3">
             <div className="w-[64px]">
               <div className="relative h-[50px] w-[50px]">
                 <Image src={image} layout="fill" alt="setel" />
@@ -23,7 +23,7 @@ export const Navbar = () => {
                 <li className='grow'>EXPLORE</li>
               </ul>
             </div>
-            <WebAppHeaderMainNav classCss={"pl-14"} />
+            <WebAppHeaderMainNav classCss={""} />
           </div>
       </ContainerFluid>
     </>
