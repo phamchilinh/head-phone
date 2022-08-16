@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+    gateway:
+      build: backend/gateway
+      image: gateway
+      container_name: gateway_container
+      ports:
+        - "3003:3003"
+      depends_on:
+        - mongo
+      links:
+        - order
+    order:
+      build: backend/order
+      image: order
+      container_name: order_container
+      ports:
+        - "3001:3001"
+      depends_on:
+        - mongo
+      links:
+        - payment
+    payment:
+      build: backend/order
+      image: payment
+      container_name: payment_container
+      ports:
+        - "3002:3002"
+      depends_on:
+        - mongo
+    web:
+      build: admin
+      image: web
+      container_name: web_container
+      ports:
+        - "3000:3000"
+      links:
+        - gateway
+    mongo:
+      image: mongo
+      container_name: mongo_container
+      ports:
+        - "27017:27017"
+
+        
