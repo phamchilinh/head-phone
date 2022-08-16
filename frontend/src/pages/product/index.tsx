@@ -1,15 +1,13 @@
 // import { useRouter } from 'next/router';
 
-import { Home } from '../lib/component/views/home';
-
-const Index = () => {
+const Product = () => {
   // const router = useRouter();
 
   return (
     <>
-      <Home />
+      <h1>Product</h1>
     </>
   );
 };
 
-export default Index;
+export default Product;
