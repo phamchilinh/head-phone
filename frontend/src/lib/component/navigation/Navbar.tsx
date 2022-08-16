@@ -2,30 +2,30 @@ import Image from 'next/image';
 import image from 'public/static/images/Logo.svg';
 import React from 'react';
 
-import Container from '../layouts/Container';
 import { WebAppHeaderMainNav } from '../ui/WebAppHeaderMainNav';
+import ContainerFluid from '../layouts/ContainerFluid';
 
 export const Navbar = () => {
   return (
     <>
-      <Container>
-        <div className="sticky flex h-[78px] w-full flex-row items-center bg-white pt-5">
-          <div className="grow">
-            <div className="relative h-[32px] w-[187px]">
-              <Image src={image} layout="fill" alt="setel" />
+      <ContainerFluid>
+          <div className="fixed flex h-[78px] w-full flex-row items-center bg-[#191720] bg-opacity-40 px-[95px] py-3">
+            <div className="w-[64px]">
+              <div className="relative h-[50px] w-[50px]">
+                <Image src={image} layout="fill" alt="setel" />
+              </div>
             </div>
+            <div className="grow px-[130px]">
+              <ul className="float-right flex flex-row space-x-8 text-white w-full text-center">
+                <li className='grow'>HEADPHONES</li>
+                <li className='grow'>EARPHONES</li>
+                <li className='grow'>SPEAKERS</li>
+                <li className='grow'>EXPLORE</li>
+              </ul>
+            </div>
+            <WebAppHeaderMainNav classCss={"pl-14"} />
           </div>
-          <div className="grow">
-            <ul className="float-right flex flex-row space-x-8">
-              <li>Product</li>
-              <li>Customers</li>
-              <li>Pricng</li>
-              <li>Resources</li>
-            </ul>
-          </div>
-          <WebAppHeaderMainNav classCss={'pl-14'} />
-        </div>
-      </Container>
+      </ContainerFluid>
     </>
   );
 };

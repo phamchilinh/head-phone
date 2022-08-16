@@ -5,12 +5,13 @@ import React from 'react';
 
 import Container from '../layouts/Container';
 import { Button } from '../ui/button/Button';
+import ContainerFluid from '../layouts/ContainerFluid';
 
 export const Header = () => {
   return (
     <>
-      <Container>
-        <div className="my-12 grid max-h-[496px] w-full grid-cols-11">
+      <ContainerFluid>
+        <div className="py-12 grid max-h-[496px] w-full grid-cols-11 bg-slate-600">
           <div className="col-span-5 flex h-[496px] flex-col py-[85px]">
             <div className="grow space-y-[30px] pb-[45px]">
               <div className="text-[44px] font-bold leading-[54px] text-[#2F281E]">
@@ -47,7 +48,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </ContainerFluid>
     </>
   );
 };
